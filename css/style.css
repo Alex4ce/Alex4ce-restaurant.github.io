@@ -1,0 +1,269 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: 'Roboto Condensed', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--main-bg);
+
+}
+
+.header{
+    height: 120px;
+    padding: 50px 0;
+    margin-bottom: 50px;
+}
+
+.container{
+    max-width: 1120px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header-logo-link{
+    flex: 0 1 200px;
+}
+
+.header-logo-link__img{}
+
+.header-nav{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+.header-nav__link{
+    padding: 5px 10px;
+    text-transform: lowercase;
+    letter-spacing: 1.2px;
+}
+
+.header-nav__link:hover{
+    color: var(--ascent);
+}
+
+.header-nav__link:nth-child(4){
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.header-logo-link:nth-of-type(2){
+    text-align: right;
+}
+
+.header-logo-link:nth-of-type(2) .header-logo-link__img{
+    transform: scaleX(-1);
+}
+
+
+/*------ chef menu ------*/
+
+.chef-menu{
+    margin-bottom: 50px;
+}
+
+.chef-menu__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 50px
+}
+
+.chef{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px
+}
+
+.chef-dish{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 2px 2px 3px #0b0503cb;
+    flex: 1 1 40%;
+    padding: 10px;
+}
+
+
+
+.chef-dish__description{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chef-dish__name{
+    font-size: 1.4em;
+    text-transform: uppercase;
+}
+
+.chef-dish__text{
+    font-size: .9rem;
+
+}
+
+.chef-dish__rate-line{
+    width: 90%;
+    height: 5px;
+    background: var(--line-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.chef-dish__rate-line::before{
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 100%;
+}
+
+.chef-dish:nth-child(2) .chef-dish__rate-line::before{
+    width: 60%;
+
+}
+.chef-dish:nth-child(3) .chef-dish__rate-line::before{
+    width: 30%;
+
+}
+.chef-dish:nth-child(4) .chef-dish__rate-line::before{
+    width: 48%;
+
+}
+.chef-dish:nth-child(5) .chef-dish__rate-line::before{
+    width: 71%;
+
+}
+.chef-dish:nth-child(6) .chef-dish__rate-line::before{
+    width: 80%;
+
+}
+.chef-dish:nth-child(7) .chef-dish__rate-line::before{
+    width: 97%;
+
+}
+.chef-dish:nth-child(8) .chef-dish__rate-line::before{
+    width: 90%;
+
+}
+
+
+.chef-dish:hover .chef-dish__rate-line::before{
+    animation: progress-bar .2s ease-in-out forwards;  
+}
+
+@keyframes progress-bar{
+    0%{
+        transform: translateX(-100%);
+        background: var(--ascent);
+
+    }
+
+    100%{
+        transform: translateX(0);
+        background: var(--ascent);
+
+
+    }
+}
+
+/* ------- chef menu finish ------- */
+
+.salad{
+    padding: 50px 0; 
+}
+
+.salad-wrapper__title{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.salad-form{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+    justify-content: center;    
+    /* flex-wrap: wrap; */
+    gap: 20px;
+}
+
+.salad-form__item{
+    appearance: none;
+    width: 100%;
+    height: 100px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #000;    
+    flex: 0 0 15%;
+    cursor: pointer;
+}
+
+.salad-form__item:checked{
+    outline: 6px solid var(--ascent);
+}
+
+.salad-form__item:nth-child(1){
+    background: url("../img/ingredients/cheese.jpeg");
+    background-size: cover;
+        background-position: center center;
+
+}
+.salad-form__item:nth-child(2){
+    background: url("../img/ingredients/pepper.jpg");
+    background-size: cover;
+        background-position: center center;
+
+}
+.salad-form__item:nth-child(3){
+    background: url("../img/ingredients/tomato.jpg");
+    background-size: cover;
+    background-position: center center;
+
+}
+.salad-form__item:nth-child(4){
+    background: url("../img/ingredients/olives.jpeg");
+    background-size: cover;
+        background-position: center center;
+
+}
+.salad-form__item:nth-child(5){
+    background: url("../img/ingredients/mushrooms.jpg");
+    background-size: cover;
+        background-position: center center;
+
+}
+.salad-form__item:nth-child(6){
+    background: url("../img/ingredients/egg.jpeg");
+    background-size: cover;
+        background-position: center center;
+
+}
+
+.salad-form .btn{
+    grid-column: 1 / span 6;
+    margin: 0 auto;
+}
+
+.salad-form .btn button{
+    border: 1px solid var(--ascent);
+    background-color: var(--main-bg);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.salad-form .btn button:active{
+    background: var(--button-click);
+}
+
+
