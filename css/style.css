@@ -86,14 +86,29 @@ body{
 }
 
 .header-nav.burger{
-    display: none;
+    display: flex;
     position: absolute;
+    width: 100%;
+    left: 0;
+    top: -100px;
+    background: #0f0604a7;
+    transition: ease-out .2s;
+    padding: 0;
+}
+
+.header-burger:hover .header-nav.burger{
+    position: absolute;
+    display: flex;
+    visibility: visible;
     width: 100%;
     left: 0;
     top: 0;
     background: #0f0604a7;
-    transition: ease-in-out 1s;
-    padding: 0;
+    padding-top: 130px;
+}
+
+.header-burger:hover .header-burger__line{
+    background: transparent;
 }
 
 
