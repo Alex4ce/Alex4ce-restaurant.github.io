@@ -1,16 +1,215 @@
+
 @media screen and (max-width: 1100px) {
-    /* .header-wrapper{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(1, 1fr);
+    .cook:hover .cook-quote {
+        left: 32%;
+    }
+ }
+
+@media screen and (max-width: 1010px) {
+   .line.left, .line.right{
+    display: none;
+   }   
+}
+
+@media screen and (max-width: 993px) {
+    .header-nav .header-nav__link:nth-child(3),
+    .header-nav .header-nav__link:nth-child(5){
+        display: none;
     }
 
+    .cook:hover .cook-quote {
+        left: 35%;
+    }
+ }
+
+ @media screen and (max-width: 913px) {    
+    .cook:hover .cook-quote {
+        left: 38%;
+    }
+ }
+
+ @media screen and (max-width: 861px) {
+    .header-nav .header-nav__link:nth-child(3),
+    .header-nav .header-nav__link:nth-child(5){
+        display: none;
+    }
+ }
+
+ @media screen and (max-width: 846px) {
     .header-nav{
-        grid-column: 2 / span 1;
+        display: none;
+    }
+
+    .header-burger{
         display: flex;
-        justify-content: center;
-        gap: 15px;
-        align-items: center;
-    } */
+    }
+
+    .header-nav.burger{
+        
+    }
+
+    .header-burger:hover .header-nav.burger{
+        display: inline-flex;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background: #0f0604a7;
+        padding-top: 130px;
+    }
+
+    .header-burger:hover .header-burger__line{
+        background: transparent;
+    }
+
+
+    .header-wrapper{
+        justify-content: space-between;
+    }
+ }
+
+ @media screen and (max-width: 832px) {    
+    .cook:hover .cook-quote {
+        left: 40%;
+        width: 470px;
+    }
+ }
+
+ @media screen and (max-width: 769px) {    
+    .cook:hover .cook-quote {
+        left: 43%;
+        width: 420px;
+    }
+ }
+
+
+ @media screen and (max-width: 745px) {    
+    .cook:hover .cook-img{
+        transform: translateX(-50%);
+        left: 50%;      
+        opacity: .3;
+    }
+
+    .cook .cook-quote, .cook:hover .cook-quote{
+        transform: translateX(-50%);
+        left: 50%;
+        width: 300px;
+        height: 300px;    
+        border-radius: 50%;    
+        padding: 10px;
+    }
+
+    .selection-wrapper .cook .cook-quote p,
+    .selection-wrapper .cook .cook-quote h3{
+        transform: translateX(0%);
+        text-align: center;
+        font-size: 15px;
+    }
     
+
+ }
+ 
+
+
+
+ @media screen and (max-width: 745px) {
+    .chef{
+        flex-wrap: wrap;
+    }
+
+    .chef-dish{
+        flex: 1 1 auto;
+        padding: 0px 20px;
+    }
+ }
+
+ @media screen and (max-width: 692px) {
+    .salad-form{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .salad-form input{
+        flex: 1 1 25%;
+    }
+
+    .salad-form .btn{
+        text-align: center;
+        flex: 1 0 100%;
+    }
+ }
+
+ @media screen and (max-width: 692px) {
+    .selection-wrapper h3{
+        text-align: center;
+        padding: 0;
+    }
+ }
+
+ @media screen and (max-width: 450px) {
+    .header-logo-link{
+        display: none;
+    }
+
+    .header{
+        margin: 0;
+    }
+
+    .header-wrapper .header-burger .header-nav.burger{
+        flex-direction: column;
+        padding-top: 0;
+        align-items: flex-start;
+        margin: 0;
+    }
 }
+
+ @media screen and (max-width: 403px) {
+    .chef-dish__img{
+        height: 90px;
+    }
+
+    .chef-dish__name{
+        font-size: 1.1em;
+    }
+
+    .chef-dish__text{
+        font-size: .6em;
+    }
+}
+
+ @media screen and (max-width: 372px) {
+        .salad-form input{
+        height: 60px;
+    }   
+ }
+
+ @media screen and (max-width: 350px) {
+    .cook-img img{
+        height: 200px;
+        width: 200px;
+    }
+
+    .chef-menu, .salad{
+        margin: 0;
+        padding-bottom: 20px;
+    }
+    .selection-wrapper .cook .cook-quote{
+        height: 200px;
+        width: 300px;
+        overflow: visible;
+    }
+
+    .cook-quote{
+        opacity: 0;
+    }
+
+    .cook:hover .cook-quote{
+        opacity: 1;
+    }
+
+    .cook:hover .cook-img {
+        opacity: 0;
+    }
+ 
+    
+}   
