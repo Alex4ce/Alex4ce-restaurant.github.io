@@ -157,9 +157,7 @@
         justify-content: space-between;
     }
 
-    .header-burger:hover .header-nav.burger{  
-        top: 15px;
-    }
+    
 
     .header-nav__link {
         padding: 0;
